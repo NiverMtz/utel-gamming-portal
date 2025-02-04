@@ -12,7 +12,7 @@
       <template #start>
         <router-link to="/">
           <Avatar
-            image="/src/assets/images/utel-gaming-logo.png"
+            :image="logo"
             class="w-full flex items-center justify-center mr-2"
           />
         </router-link>
@@ -73,9 +73,11 @@
 </template>
 
 <script>
+import logo from "../assets/images/utel-gaming-logo.png";
 export default {
   data() {
     return {
+      logo,
       items: [
         {
           label: "Noticias",
