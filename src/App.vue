@@ -1,11 +1,16 @@
 <template>
-  <h1>Hello App!</h1>
-  <p><strong>Current route path:</strong> {{ $route.fullPath }}</p>
   <nav>
-    <RouterLink to="/">Go to Home</RouterLink>
-    <RouterLink to="/about">Go to About</RouterLink>
+    <menu-component></menu-component>
   </nav>
   <main>
     <RouterView />
   </main>
 </template>
+
+<script>
+import MenuComponent from "./components/MenuComponent.vue";
+
+export default {
+  components: [MenuComponent],
+};
+</script>
