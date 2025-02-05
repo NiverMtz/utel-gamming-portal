@@ -1,6 +1,5 @@
 <template>
   <div class="card p-8">
-    .
     <h2 class="m-0 m-4 text-6xl">Noticias</h2>
     <DataView :value="news">
       <template #list="slotProps">

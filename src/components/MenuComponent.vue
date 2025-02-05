@@ -68,6 +68,15 @@
           ></i>
         </a>
       </template>
+
+      <!-- Dark mode -->
+      <template #end>
+        <div class="flex gap-2 align-items-center">
+          <ToggleSwitch v-model="checked" />
+          <span v-if="checked" class="pi pi-moon"></span>
+          <span v-else class="pi pi-sun"></span>
+        </div>
+      </template>
     </Menubar>
   </div>
 </template>
@@ -106,7 +115,18 @@ export default {
           route: "/about",
         },
       ],
+      checked: false,
     };
+  },
+  methods: {
+    toggleDarkMode() {
+      document.documentElement.classList.toggle("my-app-dark");
+    },
+  },
+  watch: {
+    checked() {
+      this.toggleDarkMode();
+    },
   },
 };
 </script>
