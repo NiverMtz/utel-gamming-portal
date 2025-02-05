@@ -14,14 +14,17 @@
               <h3 class="my-3 text-6xl">{{ item.title }}</h3>
               <small class="align-self-end">{{ item.type }}</small>
             </div>
-            <p
-              class="my-0 py-8"
+            <div
+              class="flex gap-4"
               :class="{
                 'border-bottom-2 border-primary-500': index !== news.length - 1,
               }"
             >
-              {{ item.description }}
-            </p>
+              <p class="my-0 py-8">
+                {{ item.description }}
+              </p>
+              <img :src="item.url" />
+            </div>
           </div>
         </div>
       </template>
