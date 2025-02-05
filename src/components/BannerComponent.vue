@@ -5,7 +5,48 @@
         Te damos la bienvenida a
       </h2>
       <h1 class="m-0 text-4xl md:text-8xl">UTEL GAMING</h1>
-      <Button label="Comenzar" class="mt-8"></Button>
+      <div class="flex gap-5 mt-8">
+        <a href="https://www.twitch.tv/" target="_blank">
+          <font-awesome-icon
+            :icon="['fab', 'twitch']"
+            size="2xl"
+            class="cursor-pointer"
+            style="color: white"
+          />
+        </a>
+        <a href="https://github.com/" target="_blank">
+          <font-awesome-icon
+            :icon="['fab', 'github']"
+            size="2xl"
+            class="cursor-pointer"
+            style="color: white"
+          />
+        </a>
+        <a href="https://www.youtube.com/" target="_blank">
+          <font-awesome-icon
+            :icon="['fab', 'youtube']"
+            size="2xl"
+            class="cursor-pointer"
+            style="color: white"
+          />
+        </a>
+        <a href="https://www.instagram.com/" target="_blank">
+          <font-awesome-icon
+            :icon="['fab', 'instagram']"
+            size="2xl"
+            class="cursor-pointer"
+            style="color: white"
+          />
+        </a>
+        <a href="https://www.linkedin.com/" target="_blank">
+          <font-awesome-icon
+            :icon="['fab', 'linkedin']"
+            size="2xl"
+            class="cursor-pointer"
+            style="color: white"
+          />
+        </a>
+      </div>
     </div>
   </div>
 </template>
