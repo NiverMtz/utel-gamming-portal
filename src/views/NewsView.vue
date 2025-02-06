@@ -9,20 +9,30 @@
             v-for="(item, index) in slotProps.items"
             :key="index"
           >
-            <div class="flex justify-content-between">
-              <h3 class="my-3 text-6xl">{{ item.title }}</h3>
-              <small class="align-self-end">{{ item.type }}</small>
-            </div>
             <div
-              class="flex gap-4"
+              class="grid"
               :class="{
                 'border-bottom-2 border-primary-500': index !== news.length - 1,
               }"
             >
-              <p class="my-0 py-8">
-                {{ item.description }}
-              </p>
-              <img :src="item.url" />
+              <div class="col-12">
+                <div class="flex justify-content-between">
+                  <h3 class="my-3 text-6xl">{{ item.title }}</h3>
+                  <small class="align-self-end mb-4" style="color: grey">{{
+                    item.type
+                  }}</small>
+                </div>
+              </div>
+              <div class="col-4">
+                <Image :src="item.url" alt="Image" width="100%" preview />
+              </div>
+              <div class="col-8">
+                <div class="flex justify-content-between">
+                  <p class="my-0">
+                    {{ item.description }}
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

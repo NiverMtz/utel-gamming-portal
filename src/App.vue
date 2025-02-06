@@ -1,5 +1,5 @@
 <template>
-  <nav class="fixed w-full">
+  <nav class="fixed w-full z-5">
     <menu-component></menu-component>
   </nav>
   <main>
