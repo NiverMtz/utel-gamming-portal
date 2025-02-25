@@ -15,7 +15,7 @@
           :key="link.href"
           class="text-primary"
           style="text-decoration: solid"
-          href="link.href"
+          :href="link.href"
           >{{ link.label }}</a
         >
       </div>
