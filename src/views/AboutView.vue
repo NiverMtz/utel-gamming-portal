@@ -1,27 +1,44 @@
 <template>
-  <div class="banner md:flex md:justify-content-center md:align-content-center">
+  <div
+    class="banner md:flex md:justify-content-center md:align-items-center lg:justify-content-right"
+  >
     <div
-      class="p-8 text-white md:text-center md:p-0 md:py-8 md:w-24rem lg:mt-8"
+      class="p-8 text-white md:text-center lg:text-left md:p-0 md:py-8 md:w-24rem lg:w-full"
     >
-      <div>QUIENES SOMOS</div>
-      <h1>LOS VIDEOJUEGOS SON PARTE DE LA VIDA UNIVERSITARIA</h1>
-      <div>
-        Nuestras iniciativas ofrecen experiencias únicas que combinan diversión,
-        aprendizaje y bienestar, creando un ambiente donde los estudiantes
-        pueden recargar energías y conectar con sus intereses fuera del aula.
+      <div class="lg:p-8 lg:mt-8 lg:flex lg:align-items-center lg:gap-4">
+        <div class="lg:flex lg:flex-column">
+          <div>QUIENES SOMOS</div>
+          <h1 style="width: 100%; max-width: 500px">
+            LOS VIDEOJUEGOS SON PARTE DE LA VIDA UNIVERSITARIA
+          </h1>
+          <div class="lg:w-24rem">
+            <small class="hidden lg:block">
+              Nuestras iniciativas ofrecen experiencias únicas que combinan
+              diversión, aprendizaje y bienestar, creando un ambiente donde los
+              estudiantes pueden recargar energías y conectar con sus intereses
+              fuera del aula.
+            </small>
+          </div>
+        </div>
+        <div class="block lg:hidden">
+          Nuestras iniciativas ofrecen experiencias únicas que combinan
+          diversión, aprendizaje y bienestar, creando un ambiente donde los
+          estudiantes pueden recargar energías y conectar con sus intereses
+          fuera del aula.
+        </div>
       </div>
     </div>
   </div>
-  <div class="flex flex-column">
+  <div
+    class="element flex flex-column"
+    :style="{
+      opacity: isVisible ? 1 : 0,
+      transform: isVisible ? 'translateY(0)' : 'translateY(50px)',
+      transition: 'opacity 0.5s ease, transform 0.5s ease',
+    }"
+  >
     <h2 class="align-self-center">EJES DE ACCIÓN</h2>
-    <div
-      class="element flex flex-column gap-4 mx-4 md:flex-row"
-      :style="{
-        opacity: isVisible ? 1 : 0,
-        transform: isVisible ? 'translateY(0)' : 'translateY(50px)',
-        transition: 'opacity 0.5s ease, transform 0.5s ease',
-      }"
-    >
+    <div class="flex flex-column gap-4 mx-4 md:flex-row">
       <div
         class="cover img-1 flex justify-content-center align-items-center p-4"
       >
@@ -148,6 +165,9 @@ export default {
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
+  @media screen and (min-width: 960px) {
+    height: 70vh;
+  }
 }
 .cover {
   background-repeat: no-repeat;
