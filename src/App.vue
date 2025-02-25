@@ -6,8 +6,10 @@
     <RouterView />
   </main>
   <footer v-show="$route.path !== '/'">
-    <div class="w-full flex justify-content-between p-4">
-      <div class="flex gap-4">
+    <div
+      class="w-full flex flex-column justify-content-center gap-4 p-4 md:flex-row md:justify-content-between"
+    >
+      <div class="flex justify-content-center gap-4">
         <a
           v-for="link in links"
           :key="link.href"
@@ -17,7 +19,9 @@
           >{{ link.label }}</a
         >
       </div>
-      <small>Todos los derechos reservados © UTEL GAMING 2025</small>
+      <small class="text-center"
+        >Todos los derechos reservados © UTEL GAMING 2025</small
+      >
     </div>
   </footer>
 </template>

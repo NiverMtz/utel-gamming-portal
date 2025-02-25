@@ -17,6 +17,7 @@ import {
   faTwitch,
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
+import { faLink } from "@fortawesome/free-solid-svg-icons";
 
 const app = createApp(App);
 
@@ -90,7 +91,7 @@ const MyPreset = definePreset(Nora, {
   },
 });
 
-library.add(faTwitch, faGithub, faYoutube, faInstagram, faLinkedin);
+library.add(faTwitch, faGithub, faYoutube, faInstagram, faLinkedin, faLink);
 app.use(router);
 app.use(PrimeVue, {
   theme: {
