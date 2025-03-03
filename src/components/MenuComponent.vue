@@ -33,13 +33,19 @@
           :href="href"
           v-bind="props.action"
           @click="navigate"
-          target="_blank"
+          :target="item.target"
         >
           <span :class="item.icon" />
           <span>{{ item.label }}</span>
         </a>
       </router-link>
-      <a v-else v-ripple :href="item.url" target="_blank" v-bind="props.action">
+      <a
+        v-else
+        v-ripple
+        :href="item.url"
+        :target="item.target"
+        v-bind="props.action"
+      >
         <span :class="item.icon" />
         <span>{{ item.label }}</span>
         <span v-if="hasSubmenu" class="pi pi-fw pi-angle-down" />
@@ -112,11 +118,13 @@ export default {
               label: "Utel Universidad",
               url: "https://utel.edu.mx/",
               icon: "pi pi-external-link",
+              target: "_blank",
             },
             {
               label: "Siempre Utel",
               url: "https://siempreutel.utel.edu.mx/",
               icon: "pi pi-external-link",
+              target: "_blank",
             },
           ],
         },
