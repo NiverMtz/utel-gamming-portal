@@ -11,6 +11,7 @@
       href="https://www.eltiempo.com/cultura/gente/videojuegos-amigos-o-enemigos-de-su-salud-la-ciencia-revela-los-beneficios-de-jugar-hasta-tres-horas-diarias-3395697"
       class="text-right lg:text-xl lg:text-center"
       style="color: var(--p-green-700)"
+      target="_blank"
     >
       Seguir leyendo...
     </a>
