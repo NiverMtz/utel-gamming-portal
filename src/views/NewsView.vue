@@ -1,11 +1,11 @@
 <template>
-  <div class="card w-full pt-8 lg:p-8">
-    <h2 class="m-0 m-4 text-6xl">Noticias</h2>
+  <div class="flex flex-column gap-4 my-4 mx-4 lg:mx-8">
+    <h1>Noticias</h1>
     <DataView :value="news">
       <template #list="slotProps">
         <div class="flex flex-column gap-4">
           <div
-            class="flex flex-column m-4"
+            class="flex flex-column p-4"
             v-for="(item, index) in slotProps.items"
             :key="index"
           >
@@ -27,10 +27,8 @@
                 <Image :src="item.url" alt="Image" width="100%" preview />
               </div>
               <div class="col-12 md:col-8">
-                <div class="flex justify-content-between">
-                  <p class="my-0">
-                    {{ item.description }}
-                  </p>
+                <div class="flex flex-wrap justify-content-between">
+                  {{ item.description }}
                 </div>
               </div>
             </div>

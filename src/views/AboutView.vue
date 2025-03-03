@@ -1,9 +1,9 @@
 <template>
   <div
-    class="banner md:flex md:justify-content-center md:align-items-center lg:justify-content-right"
+    class="p-6 md:p-0 md:flex md:justify-content-center md:align-items-center lg:justify-content-right banner"
   >
     <div
-      class="p-8 text-white md:text-center lg:text-left md:p-0 md:py-8 md:w-24rem lg:w-full"
+      class="md:text-center lg:text-left md:p-0 md:py-8 md:w-24rem lg:w-full"
     >
       <div class="lg:p-8 lg:mt-8 lg:flex lg:align-items-center lg:gap-4">
         <div class="lg:flex lg:flex-column">
@@ -29,53 +29,7 @@
       </div>
     </div>
   </div>
-  <div
-    class="element flex flex-column"
-    :style="{
-      opacity: isVisible ? 1 : 0,
-      transform: isVisible ? 'translateY(0)' : 'translateY(50px)',
-      transition: 'opacity 0.5s ease, transform 0.5s ease',
-    }"
-  >
-    <h2 class="align-self-center">EJES DE ACCIÓN</h2>
-    <div class="flex flex-column gap-4 mx-4 md:flex-row">
-      <div
-        class="cover img-1 flex justify-content-center align-items-center p-4"
-      >
-        <div class="flex flex-column">
-          <h3>E-sports</h3>
-          <small
-            >Organización y formación de equipos para competir en torneos,
-            atrayendo nuevos usuarios y fortaleciendo la presencia de la
-            universidad</small
-          >
-        </div>
-      </div>
-      <div
-        class="cover img-2 flex justify-content-center align-items-center p-4"
-      >
-        <div class="flex flex-column">
-          <h3>Noticias</h3>
-          <small
-            >Publicamos convocatorias, anunciamos torneos y compartimos las
-            últimas tendencias en el mundo de los videojuegos</small
-          >
-        </div>
-      </div>
-      <div
-        class="cover img-3 flex justify-content-center align-items-center p-4"
-      >
-        <div class="flex flex-column">
-          <h3>Diseño de videojuegos</h3>
-          <small
-            >Proporcionamos herramientas intuitivas para crear documentos de
-            diseño de videojuegos de manera sencilla y profesional</small
-          >
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="flex flex-column">
+  <div class="flex flex-column py-4">
     <h2 class="align-self-center">NUESTRO EQUIPO</h2>
     <div class="flex flex-wrap justify-content-center gap-4 m-4">
       <Card
@@ -164,18 +118,12 @@ export default {
     url("https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExN3JzajRvNHg3YzNiYWdncHQ5b3ZieW04cWF0cGp0em9yODJqNjRlcyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/AdiUiBj8Q3LmVGpy5F/giphy.gif");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   height: 100vh;
+  color: white;
   @media screen and (min-width: 960px) {
     height: 70vh;
   }
-}
-.cover {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  color: white;
-  height: 300px;
-  width: 100%;
 }
 .img-1 {
   background-image: linear-gradient(135deg, #030604c3, #131813ad),

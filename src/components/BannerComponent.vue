@@ -1,98 +1,79 @@
 <template>
-  <div class="banner">
-    <div class="content">
-      <h2 class="m-0 mt-6 text-sm md:text-xl xl:text-3xl font-light">
-        Te damos la bienvenida a
-      </h2>
-      <h1 class="m-0 text-4xl md:text-8xl">UTEL GAMING</h1>
-      <div class="flex gap-5 mt-8">
-        <a href="https://www.twitch.tv/" target="_blank">
-          <font-awesome-icon
-            :icon="['fab', 'twitch']"
-            size="2xl"
-            class="cursor-pointer"
-            style="color: white"
-          />
-        </a>
-        <a href="https://github.com/" target="_blank">
-          <font-awesome-icon
-            :icon="['fab', 'github']"
-            size="2xl"
-            class="cursor-pointer"
-            style="color: white"
-          />
-        </a>
-        <a href="https://www.youtube.com/" target="_blank">
-          <font-awesome-icon
-            :icon="['fab', 'youtube']"
-            size="2xl"
-            class="cursor-pointer"
-            style="color: white"
-          />
-        </a>
-        <a href="https://www.instagram.com/" target="_blank">
-          <font-awesome-icon
-            :icon="['fab', 'instagram']"
-            size="2xl"
-            class="cursor-pointer"
-            style="color: white"
-          />
-        </a>
-        <a href="https://www.linkedin.com/" target="_blank">
-          <font-awesome-icon
-            :icon="['fab', 'linkedin']"
-            size="2xl"
-            class="cursor-pointer"
-            style="color: white"
-          />
-        </a>
-      </div>
+  <div class="banner__container">
+    <div class="banner__content text-center lg:text-left">
+      <h3>Bienvenido a tu espacio gamer</h3>
+      <h1>SOMOS UTEL GAMING</h1>
+      <small class="md:text-xl md:w-24rem">
+        Descubre nuestros proyectos, conoce nuestro equipo y únete a la
+        aventura.
+      </small>
+      <Button label="Comenzar" :rounded="true" class="my-8 md:w-10rem"></Button>
+    </div>
+    <div class="banner__image hidden lg:block">
+      <img src="../assets/images/utel-hero-girl-gamming.png" alt="Imagen" />
     </div>
   </div>
 </template>
 
+<script>
+export default {};
+</script>
+
 <style scoped>
-.banner {
-  height: 100vh;
-  background-image: linear-gradient(135deg, #030604, #10d81d6a),
-    url("../assets/images/banner-bg.jpg");
+h1 {
+  font-size: 2.5rem;
+  @media screen and (min-width: 760px) {
+    width: 100%;
+    font-size: 3rem;
+  }
+}
+
+h3 {
+  align-self: center;
+  font-weight: 500;
+  letter-spacing: 1px;
+  width: 200px;
+  margin-bottom: 2rem;
+  @media screen and (min-width: 760px) {
+    width: 100%;
+    align-self: flex-start;
+  }
+}
+
+.banner__container {
+  background-image: var(--brand-gradient),
+    url("../assets/images/utel-bg-home-mobile.jpg");
   background-size: cover;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  @media screen and (min-width: 960px) {
-    justify-content: start;
-  }
+  align-items: center;
+  padding: 48px;
+  margin-top: -96px;
+  gap: 96px;
   color: white;
+  @media screen and (min-width: 760px) {
+    flex-direction: row;
+    background-image: var(--brand-gradient), var(--image-home);
+  }
 }
-
-.content {
-  max-width: 100%;
+.banner__content {
   display: flex;
   flex-direction: column;
-  @media screen and (min-width: 960px) {
-    padding: 4rem;
-    padding-left: 10rem;
-    max-width: 40vw;
+  justify-content: center;
+  height: 100vh;
+  @media screen and (min-width: 760px) {
+    padding: 0;
+    justify-content: center;
   }
 }
-
-.title {
-  font-size: 3rem;
-  margin-bottom: 20px;
+.banner__image {
+  width: 200px;
+  @media screen and (min-width: 760px) {
+    width: 500px;
+  }
 }
-
-.btn {
-  padding: 10px 20px;
-  font-size: 1.2rem;
-  color: #6a11cb;
-  background-color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-  background-color: #f0f0f0;
+.banner__image img {
+  max-width: 100%;
 }
 </style>

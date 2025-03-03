@@ -1,46 +1,52 @@
 <template>
-  <nav class="fixed w-full z-5">
+  <nav class="navbar">
     <menu-component></menu-component>
   </nav>
-  <main>
+  <main class="main">
     <RouterView />
   </main>
-  <footer v-show="$route.path !== '/'">
-    <div
-      class="w-full flex flex-column justify-content-center gap-4 p-4 md:flex-row md:justify-content-between"
-    >
-      <div class="flex justify-content-center gap-4">
-        <a
-          v-for="link in links"
-          :key="link.href"
-          class="text-primary"
-          style="text-decoration: solid"
-          :href="link.href"
-          >{{ link.label }}</a
-        >
-      </div>
-      <small class="text-center"
-        >Todos los derechos reservados © UTEL GAMING 2025</small
-      >
-    </div>
+  <footer>
+    <footer-component />
   </footer>
+  <div class="bottom-line--decoration" />
 </template>
 
 <script>
+import FooterComponent from "./components/FooterComponent.vue";
 import MenuComponent from "./components/MenuComponent.vue";
 
 export default {
-  components: [MenuComponent],
+  components: [MenuComponent, FooterComponent],
   data() {
     return {
-      links: [
+      socialMedia: [
         {
-          label: "Siempre utel",
-          href: "https://siempreutel.utel.edu.mx/",
+          icon: ["fab", "facebook"],
+          href: "https://www.twitch.tv/ugam1ng",
         },
         {
-          label: "Utel universidad",
-          href: "https://utel.edu.mx/",
+          icon: ["fab", "instagram"],
+          href: "https://www.twitch.tv/ugam1ng",
+        },
+        {
+          icon: ["fab", "x-twitter"],
+          href: "https://www.twitch.tv/ugam1ng",
+        },
+        {
+          icon: ["fab", "youtube"],
+          href: "https://www.twitch.tv/ugam1ng",
+        },
+        {
+          icon: ["fab", "tiktok"],
+          href: "https://www.twitch.tv/ugam1ng",
+        },
+        {
+          icon: ["fab", "twitch"],
+          href: "https://www.twitch.tv/ugam1ng",
+        },
+        {
+          icon: ["fab", "linkedin"],
+          href: "https://www.twitch.tv/ugam1ng",
         },
       ],
     };
@@ -51,5 +57,25 @@ export default {
 #app {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+}
+
+.main {
+  padding-top: 54px;
+}
+
+.bottom-line--decoration {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  background: #030604;
+  height: 15px;
 }
 </style>

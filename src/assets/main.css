@@ -1,4 +1,26 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Rokkitt:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  /* custom colors */
+  --p-green-50: #005c02 !important;
+  --p-green-100: #006902 !important;
+  --p-green-200: #007702 !important;
+  --p-green-300: #008502 !important;
+  --p-green-400: #009202 !important;
+  --p-green-500: #00a803 !important;
+  --p-green-600: #00b104 !important;
+  --p-green-700: #00b503 !important;
+  --p-green-800: #00c903 !important;
+  --p-green-900: #00d604 !important;
+  --p-green-950: #00e404 !important;
+
+  /* assets */
+  --brand-gradient: linear-gradient(135deg, #030604, #10d81d6a);
+  --image-home: url("./images/banner-bg.jpg");
+
+  /* helpers */
+  --p-menubar-submenu-background: #fff !important;
+}
 
 html {
   width: 100%;
@@ -6,9 +28,36 @@ html {
 }
 
 body {
-  font-family: "Poppins", sans-serif;
-  font-size: 16px; /* Tamaño de texto legible */
-  line-height: 1.6; /* Espaciado adecuado para mejor legibilidad */
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  line-height: 1.6;
   margin: 0 auto;
   padding: 0;
+}
+
+h1,
+h2 {
+  margin: 0;
+}
+
+h1 {
+  font-size: 2.5rem;
+  @media screen and (min-width: 760px) {
+    font-size: 3rem;
+  }
+}
+
+h3 {
+  font-weight: 500;
+}
+
+/* helpers */
+
+.p-menubar-submenu {
+  * > .p-menubar-item-link {
+    color: black !important;
+  }
 }
