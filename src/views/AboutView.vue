@@ -94,20 +94,9 @@ export default {
       let response = await GoogleSheetsService.getAboutUsTeam();
       this.team = response.data;
     },
-    handleScroll() {
-      const elementTop = document
-        .querySelector(".element")
-        .getBoundingClientRect().top;
-      const windowHeight = window.innerHeight;
-      this.isVisible = elementTop < windowHeight * 0.75; // Ajusta este valor para controlar el punto de activación
-    },
   },
   mounted() {
     this.getAboutUs();
-    window.addEventListener("scroll", this.handleScroll);
-  },
-  beforeUnmount() {
-    window.removeEventListener("scroll", this.handleScroll);
   },
 };
 </script>
@@ -124,22 +113,5 @@ export default {
   @media screen and (min-width: 960px) {
     height: 70vh;
   }
-}
-.img-1 {
-  background-image: linear-gradient(135deg, #030604c3, #131813ad),
-    url("https://images.pexels.com/photos/7862594/pexels-photo-7862594.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
-}
-.img-2 {
-  background-image: linear-gradient(135deg, #030604c3, #131813ad),
-    url("https://images.pexels.com/photos/7046723/pexels-photo-7046723.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
-}
-.img-3 {
-  background-image: linear-gradient(135deg, #030604c3, #131813ad),
-    url("https://images.pexels.com/photos/326502/pexels-photo-326502.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
-}
-
-.element {
-  opacity: 0;
-  transform: translateY(50px);
 }
 </style>

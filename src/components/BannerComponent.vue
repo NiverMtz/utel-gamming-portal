@@ -7,7 +7,14 @@
         Descubre nuestros proyectos, conoce nuestro equipo y únete a la
         aventura.
       </small>
-      <Button label="Comenzar" :rounded="true" class="my-8 md:w-10rem"></Button>
+      <a
+        href="https://linktr.ee/UtelGaming"
+        target="_blank"
+        class="flex justify-content-center border-round no-underline text-white p-2 my-8 md:w-10rem"
+        style="background: var(--p-green-600)"
+      >
+        Síguenos
+      </a>
     </div>
     <div class="banner__image hidden lg:block">
       <img src="../assets/images/utel-hero-girl-gamming.png" alt="Imagen" />

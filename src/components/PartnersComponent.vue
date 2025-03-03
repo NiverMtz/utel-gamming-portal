@@ -4,7 +4,12 @@
     <div
       class="flex flex-column gap-8 align-items-center lg:flex-row lg:justify-content-center"
     >
-      <a v-for="(partner, index) in partners" :key="index" :href="partner.url">
+      <a
+        v-for="(partner, index) in partners"
+        :key="index"
+        :href="partner.url"
+        target="_blank"
+      >
         <img :src="partner.image" class="max-w-full h-4rem" />
       </a>
     </div>

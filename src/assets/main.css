@@ -20,6 +20,7 @@
 
   /* helpers */
   --p-menubar-submenu-background: #fff !important;
+  --border-radius: 1.5rem;
 }
 
 html {
