@@ -28,11 +28,11 @@ export default {
         },
         {
           icon: ["fab", "instagram"],
-          href: "https://www.instagram.com/uteluniversidad/channel/",
+          href: "https://www.instagram.com/utelgaming/",
         },
         {
           icon: ["fab", "x-twitter"],
-          href: "https://x.com/utel_?lang=es&mx=2",
+          href: "https://x.com/G95998Utel",
         },
         {
           icon: ["fab", "youtube"],
@@ -40,7 +40,7 @@ export default {
         },
         {
           icon: ["fab", "tiktok"],
-          href: "https://www.tiktok.com/@uteluniversidad?lang=es",
+          href: "https://www.tiktok.com/@utelgaming",
         },
         {
           icon: ["fab", "twitch"],

@@ -14,7 +14,7 @@
       <div class="flex flex-column mt-8">
         <small>
           <span class="pi pi-calendar-clock"></span>
-          03 de mayo, 9:30am
+          30 de mayo, 9:30am
         </small>
         <small>
           <span class="pi pi-map-marker"></span>
