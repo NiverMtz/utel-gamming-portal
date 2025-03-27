@@ -7,4 +7,7 @@ export default {
   getAboutUsTeam() {
     return apiClient.get("/api/about");
   },
+  generateGDD(data) {
+    return apiClient.post("/api/gdd-generator", data);
+  },
 };

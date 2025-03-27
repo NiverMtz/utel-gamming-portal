@@ -21,7 +21,9 @@ import {
   faXTwitter,
   faDiscord,
 } from "@fortawesome/free-brands-svg-icons";
-import { faLink, faX } from "@fortawesome/free-solid-svg-icons";
+import { faLink } from "@fortawesome/free-solid-svg-icons";
+import { Form } from "@primevue/forms";
+import { ToastService } from "primevue";
 
 const app = createApp(App);
 
@@ -95,5 +97,7 @@ app.use(PrimeVue, {
     },
   },
 });
+app.use(ToastService);
+
 app.component("font-awesome-icon", FontAwesomeIcon);
 app.mount("#app");

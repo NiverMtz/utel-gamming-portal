@@ -1,4 +1,5 @@
 <template>
+  <Toast />
   <nav class="navbar">
     <menu-component></menu-component>
   </nav>
